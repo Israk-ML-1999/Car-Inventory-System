@@ -32,9 +32,6 @@ The Car Inventory System is a basic web application that allows users to enter i
     python app.py
     ```
 
-3. **Access the Application:**
-    Open your web browser and go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
-
 ## Usage
 
 1. Access the web application through the provided URL.
