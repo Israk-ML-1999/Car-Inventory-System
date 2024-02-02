@@ -1,0 +1,50 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Inventory System</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Car Inventory</h2>
+        <table id="carTable" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Type</th>
+                    <th>Battery Capacity (kWh)</th>
+                    <th>Fuel Efficiency (MPG)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for car in cars %}
+                    <tr>
+                        <td>{{ car[0] }}</td>
+                        <td>{{ car[1] }}</td>
+                        <td>{{ car[2] }}</td>
+                        <td>{{ car[3] }}</td>
+                        <td>{{ car[4] }}</td>
+                        <td>{{ car[5] }}</td>
+                        <td>{{ car[6] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#carTable').DataTable();
+        });
+    </script>
+</body>
+</html>
